@@ -1,0 +1,53 @@
+// Some of my notes from doing APIs, RESTful, JSON and XML on codecademy. This is
+// all based on using JavaScript coding
+
+// POST /codecademy/learn-http HTTP/1.1
+// Host: www.codecademy.com
+// Content-Type: text/html; charset=UTF-8
+
+// Name=Eric&Age=26
+
+// Sample API Key
+var apiKey = "FtHwuH8w1RDjQpOr0y0gF3AWm8sRsRzncK3hHh9";
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://www.codecademy.com/doesnt_exist", false);
+xhr.send();
+// Add your code below!
+console.log(xhr.status);
+
+// HTTP/1.1 200 OK
+// Content-Type: text/xml; charset=UTF-8
+
+// <?xml version="1.0" encoding="utf-8"?>
+// <string xmlns="http://www.codecademy.com/">Accepted</string>
+
+// Sample XML code
+<pet>
+  <name>Jeffrey</name>
+  <species>Giraffe</species>
+</pet>
+
+// Doing a request in XML
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://www.codecademy.com/files/samples/javascript_learn_apis.xml", false);
+
+xhr.setRequestHeader('Content-Type', 'text/xml');
+xhr.send();
+
+xmlDocument = xhr.responseXML;
+console.log(xmlDocument.childNodes['0'].textContent);
+
+// JSON example code
+{
+  "pets": {
+    "name": "Jeffrey",
+    "species": "Giraffe"
+  }
+}
+
+JSON DEMO
+var demo = '{"pets": { "name": "Jeffrey", "species": "Giraffe"}}';
+
+var json = JSON.parse(demo);
+console.log(json);
