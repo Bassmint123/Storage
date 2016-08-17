@@ -1,4 +1,4 @@
-// This script is used to call the YouTube API.
+// This script is used to call the YouTube API. We do a simple query here.
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
